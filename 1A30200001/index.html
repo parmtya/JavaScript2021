@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>JavaScript Sample</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+</head>
+<body>
+    <script>
+        function setup() {
+  createCanvas(500, 500, WEBGL);
+}
+
+function draw() {
+  background(255,255,255);
+  rotateY(frameCount * 0.01);
+
+  for (let j = 0; j < 5; j++) {
+    push();
+    for (let i = 0; i < 10; i++) {
+      
+      rotateZ(frameCount * 0.01);
+      push();
+      let c = color(100,100,100);
+      fill(c);
+      box(50,50);
+      pop();
+    }
+    pop();
+  }
+}
+
+
+
+    </script>
+</body>
+</html>
